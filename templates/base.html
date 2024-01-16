@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    {% include 'partials/_head.html' %}
+    <title>{% block title %}{% endblock %}Portifolio</title>
+    {% block favicon %}
+    {% endblock favicon %}
+</head>
+
+<body>
+        {% block content %}
+        {% endblock %}
+</body>
+{% include 'partials/_footer.html' %}
+</html>
