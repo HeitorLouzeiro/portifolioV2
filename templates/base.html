@@ -1,16 +1,25 @@
-<!doctype html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     {% include 'partials/_head.html' %}
-    <title>{% block title %}{% endblock %}Portifolio</title>
-    {% block favicon %}
-    {% endblock favicon %}
-</head>
+    <title>
+      {% block title %}
 
-<body>
-        {% block content %}
-        {% endblock %}
-</body>
-{% include 'partials/_footer.html' %}
+      {% endblock %}-Portifolio
+    </title>
+    {% block favicon %}
+
+    {% endblock %}
+  </head>
+
+  <body class="dark">
+    <main class="content-2">
+      {% include 'partials/_navbar.html' %}
+      {% block content %}
+
+      {% endblock %}
+    </main>
+  </body>
+  {% include 'partials/_footer.html' %}
 </html>
