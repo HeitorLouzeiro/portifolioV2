@@ -4,4 +4,4 @@ from django.shortcuts import HttpResponse, render
 
 
 def index(request):
-    return render(request, 'core/pages/home.html')
+    return render(request, 'core/pages/index.html')

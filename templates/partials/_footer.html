@@ -1,11 +1,6 @@
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.3/dist/sweetalert2.all.min.js"></script>
-{% if messages %}
-    {% for message in messages %}
-        <script>
-            swal({
-                text: "{{ message }}",
-                icon: "{{ message.tags }}",
-              });
-        </script>
-    {% endfor %}
-{% endif %}
+{% load static %}
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="{% static 'assets/custom/js/custom.js' %}"></script>
+<script src="{% static 'assets/custom/js/parallax.min.js' %}"></script>
+<script src="{% static 'assets/custom/js/morphext.min.js' %}"></script>
+<script src="{% static 'assets/custom/js/infinite-scroll.min.js' %}"></script>
