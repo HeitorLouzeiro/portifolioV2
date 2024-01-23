@@ -1,38 +1,41 @@
+
 <!-- section home -->
 <section id="home" class="home d-flex align-items-center">
 	<div class="container">
 
 		<!-- intro -->
 		<div class="intro">
-			<!-- avatar image -->
-			<img src="images/avatar-1.svg" alt="Bolby" class="mb-4" />
-
-			<!-- info -->
-			<h1 class="mb-2 mt-0">Heitor Louzeiro</h1>
-			<span>I'm a <span class="text-rotating">developer Python, Back-end developer, Django
-					developer</span></span>
-
-			<!-- social icons -->
-			<ul class="social-icons light list-inline mb-0 mt-4">
-				<li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-				<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin"></i></i></a></li>
-			</ul>
-
+			{% for personaldata in personaldatas %}
+				<!-- avatar image -->
+				{% if personaldata.cover %}
+					<img src="{{ personaldata.cover.url }}" alt="{{ personaldata.name }}" class="mb-4 image-photo">
+			  	{% endif %}
+				<!-- info -->
+				<h1 class="mb-2 mt-0">{{personaldata.name}}</h1>
+				<span class="text-rotating">{{personaldata.title}}</span>
+			{% endfor %}
+				
+				<!-- social icons -->
+				<ul class="social-icons light list-inline mb-0 mt-4">
+					<li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin"></i></i></a></li>
+				</ul>
+				
 			<!-- buttons -->
-			<div class="mt-4">
+			<div class="mt-4 py-3">
 				<a href="#contact" class="btn btn-default">Hire me</a>
 			</div>
+			<!-- scroll down mouse wheel -->
+			<div class="scroll-down">
+				<a href="#about" class="mouse-wrapper">
+					<span>Scroll Down</span>
+					<span class="mouse">
+						<span class="wheel"></span>
+					</span>
+				</a>
+			</div>
 		</div>
-
-		<!-- scroll down mouse wheel -->
-		<div class="scroll-down">
-			<a href="#about" class="mouse-wrapper">
-				<span>Scroll Down</span>
-				<span class="mouse">
-					<span class="wheel"></span>
-				</span>
-			</a>
-		</div>
+		
 
 		<!-- parallax layers -->
 		<div class="parallax" data-relative-input="true">
